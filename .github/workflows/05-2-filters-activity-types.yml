@@ -1,0 +1,12 @@
+name: 05-2-filters-activity-types
+
+on: 
+    pull_request:
+        types: [closed]
+        branches: [main]
+
+jobs:
+    echo:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Runnning Wherever a PR is opened or Synchronized asn base branch is main"
