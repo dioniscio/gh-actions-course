@@ -22,3 +22,9 @@ jobs:
                echo "Step env var 2: $step_var2"
                echo "Job env var: ${{env.JOB_VAR}}"
                echo "Job env var: ${{env.WORKFLOW_VAR}}"
+    echo-prod:
+        runs-on: ubuntu-latest
+        environment: prod
+        steps:
+            - name: Print var prod
+              run: echo "ENV PRO ${{vars.TARGET_VAR}}"
