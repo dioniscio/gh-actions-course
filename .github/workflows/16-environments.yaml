@@ -5,10 +5,10 @@ on:
         inputs:
             target-env:
                 type: environment
-                default: staging
+                default: stagin
 
 jobs:
-    echoo:
+    echo:
         runs-on: ubuntu-latest
         environment: ${{inputs.target-env}}
         env:
