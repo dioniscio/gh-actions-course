@@ -1,0 +1,16 @@
+name: Cache nod eand NPM dependencies
+description: This action allows to cache both Node and NPM
+
+inputs:
+  node-version:
+   description:  Nodejs version to use
+   default: 20.X
+   required: true
+
+runs:
+ using: composite
+ steps:
+   - name: Setup Ndejs version ${{ inputs.node-version }}
+     uses: actions/setup-node@v4
+     with:
+       node-version: ${{inputs.node-version}}
