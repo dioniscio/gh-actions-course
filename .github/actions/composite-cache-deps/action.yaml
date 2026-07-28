@@ -4,7 +4,7 @@ description: This action allows to cache both Node and NPM
 inputs:
   node-version:
    description:  Nodejs version to use
-   default: 20.X
+   default: 24.X
    required: true
 
 runs:
