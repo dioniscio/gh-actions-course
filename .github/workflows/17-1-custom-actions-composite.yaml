@@ -16,6 +16,8 @@ jobs:
               uses: ./.github/actions/composite-cache-deps
               with:
                 node-version: 24.x
+            - name: Install Dependencies
+              run: npm ci
             - name: Testing
               run: npm run test
             - name: Building
