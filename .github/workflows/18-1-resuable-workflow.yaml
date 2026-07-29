@@ -15,7 +15,7 @@ on:
 
 jobs:
     deploy:
-        runs-on: buntu-latest
+        runs-on: ubuntu-latest
         outputs:
             build-status: ${{steps.build.outputs.build-status}}
             url: ${{steps.deploy.outputs.url}}
