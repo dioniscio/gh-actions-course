@@ -1,0 +1,19 @@
+name: 18-2-resuable-workflow
+
+on:
+    workflow_dispatch:
+   
+jobs:
+    deploy:
+     uses: ./.github/workflows/18-1-resuable-workflow.yaml
+     with:
+        arget-directory: dummmy-dir
+    print-output:
+        runs-on: ubuntu-latest
+        needs: deploy
+        steps:
+            - name: print output
+              run:  |
+               echo "Build status: ${{needs.deploy.outputs.build-status}}"
+               echo "URL: ${{needs.deploy.outputs.url}}"
+       
